@@ -1,0 +1,11 @@
+@import '../../assets/utils/vars.scss';
+
+.button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: $b-radius;
+  background: $c-purple;
+  font-weight: $fw-700;
+  font-size: $fs-16;
+}

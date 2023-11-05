@@ -1,0 +1,13 @@
+@import '../../assets/utils/vars.scss';
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  font-size: $fs-20;
+  font-weight: $fw-600;
+  text-align: center;
+}

@@ -1,0 +1,65 @@
+@import '@/assets/utils/vars';
+@import '@/assets/utils/mixins';
+
+.inputWrapper {
+  position: absolute;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+.input {
+  width: 26%;
+  max-width: 380px;
+  padding: 10px 15px;
+
+  transition: all 0.3s ease-in-out;
+
+  color: $c-white;
+  border: none;
+  border-radius: $b-radius;
+  background: $c-coal-2;
+
+  font-size: $fs-16;
+
+  &::placeholder {
+    color: $c-gray;
+
+    font-size: $fs-12;
+
+    @include pad {
+      font-size: $fs-14;
+    }
+  }
+
+  &:focus {
+    width: 100%;
+
+    transition: all 0.3s ease-in-out;
+
+    outline: none;
+  }
+
+  @include pad {
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+  }
+}
+
+.searchWrapper {
+  position: absolute;
+
+  display: none;
+
+  @include pad {
+    right: 10px;
+
+    justify-content: flex-end;
+
+    @include flex-center;
+  }
+}

@@ -1,0 +1,20 @@
+@import '../../assets/utils/vars.scss';
+@import '../../assets/utils/mixins.scss';
+
+.category {
+  @include flex-between;
+  width: 100%;
+  padding: 12px 20px;
+  background: $c-coal-5;
+  border: 2px solid $c-coal-1;
+  border-radius: $b-radius;
+}
+
+.categoryName {
+  width: max-content;
+}
+
+.actionBtnWrapper {
+  @include flex-center;
+  gap: 20px;
+}

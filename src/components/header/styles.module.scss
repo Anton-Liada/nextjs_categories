@@ -1,0 +1,30 @@
+@import '../../assets/utils/vars';
+@import '../../assets/utils/mixins';
+
+.header {
+  height: 76px;
+
+  border-bottom: 1px solid $c-coal-4;
+}
+
+.headerWrapper {
+  position: relative;
+
+  height: 76px;
+
+  border-bottom: 1px solid $c-coal-4;
+  cursor: pointer;
+
+  @include flex-between;
+}
+
+.logoWrapper {
+  gap: 10px;
+
+  @include flex-center;
+}
+
+.title {
+  font-size: $fs-32;
+  font-weight: $fw-700;
+}
