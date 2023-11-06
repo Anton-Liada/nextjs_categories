@@ -4,11 +4,7 @@ import Container from "../container";
 import SearchInput from "../searchInput";
 import styles from "./styles.module.scss";
 import { FC } from "react";
-
-interface IHeaderProps {
-  name: string;
-  setName: (value: string) => void;
-}
+import { IHeaderProps } from "@/types";
 
 const Header: FC<IHeaderProps> = ({ name, setName }) => {
   return (

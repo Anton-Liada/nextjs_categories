@@ -1,3 +1,4 @@
+import { DraggableProvided } from "@hello-pangea/dnd";
 import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
 
 export interface RequestContext {
@@ -16,7 +17,7 @@ export interface CategoryProps {
   category: ICategory;
   handleOpenModal: (id: string) => void;
   onCheckboxChange: (categoryId: string, isChecked: boolean) => void;
-  draggableProvided: any;
+  draggableProvided: DraggableProvided;
 }
 
 export interface ButtonProps
@@ -30,4 +31,25 @@ export interface ButtonProps
 
 export interface ICategoryListProps {
   name: string;
+}
+
+export interface IHeaderProps {
+  name: string;
+  setName: (value: string) => void;
+}
+
+export interface ISearchInput {
+  name: string;
+  setName: (value: string) => void;
+}
+
+export interface CustomCheckboxProps {
+  checked: boolean;
+  onChange: (isChecked: boolean) => void;
+  defaultChecked?: boolean;
+}
+
+export interface IModalProps {
+  handleClose: () => void;
+  onDelete: () => void;
 }

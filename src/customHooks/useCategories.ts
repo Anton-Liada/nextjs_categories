@@ -14,8 +14,8 @@ const useCategories = () => {
       try {
         const { data } = await axios.get(BASE_ENDPOINT);
 
-        setCategories(data.categories || data.filteredCategories);
-        setTempCategories(data.categories || data.filteredCategories);
+        setCategories(data.categories);
+        setTempCategories(data.categories);
       } catch (error) {
         console.error(error);
         setError("Error fetching categories");

@@ -4,11 +4,7 @@ import styles from "./styles.module.scss";
 import Close from "../icons/close";
 import Button from "../button";
 import Delete from "../icons/delete";
-
-export interface IModalProps {
-  handleClose: () => void;
-  onDelete: () => void;
-}
+import { IModalProps } from "@/types";
 
 const Modal: FC<IModalProps> = ({ handleClose, onDelete }) => {
   return (

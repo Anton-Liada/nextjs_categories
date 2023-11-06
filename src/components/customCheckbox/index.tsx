@@ -1,12 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import cls from "classnames";
 import styles from "./styles.module.scss";
-
-interface CustomCheckboxProps {
-  checked: boolean;
-  onChange: (isChecked: boolean) => void;
-  defaultChecked?: boolean;
-}
+import { CustomCheckboxProps } from "@/types";
 
 const CustomCheckbox: FC<CustomCheckboxProps> = ({
   checked,

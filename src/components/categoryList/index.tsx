@@ -17,7 +17,7 @@ import cls from "classnames";
 import { ICategory, ICategoryListProps } from "@/types";
 import styles from "./styles.module.scss";
 import Modal from "../modal";
-import { Draggable, Droppable } from "@hello-pangea/dnd";
+import { Draggable, DropResult, Droppable } from "@hello-pangea/dnd";
 import { DragDropContext } from "@hello-pangea/dnd";
 
 const CategoryList: FC<ICategoryListProps> = ({ name }) => {
@@ -33,7 +33,7 @@ const CategoryList: FC<ICategoryListProps> = ({ name }) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [itemToRemove, setItemToRemove] = useState<string | null>(null);
 
-  const onDragEnd = (result: any) => {
+  const onDragEnd = (result: DropResult) => {
     setIsShowActionBtn(true);
     if (!result.destination) return;
 
@@ -251,12 +251,14 @@ const CategoryList: FC<ICategoryListProps> = ({ name }) => {
                     )}
                   </Draggable>
                 ))}
+
                 {droppableProvider.placeholder}
               </div>
             )}
           </Droppable>
         )}
       </div>
+
       {isOpenModal && (
         <Modal handleClose={handleCloseModal} onDelete={handleDeleteCategory} />
       )}

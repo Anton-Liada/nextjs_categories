@@ -3,11 +3,7 @@
 import { FC } from "react";
 import Search from "@/components/icons/search";
 import styles from "./styles.module.scss";
-
-interface ISearchInput {
-  name: string;
-  setName: (value: string) => void;
-}
+import { ISearchInput } from "@/types";
 
 const SearchInput: FC<ISearchInput> = ({ name, setName }) => {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
