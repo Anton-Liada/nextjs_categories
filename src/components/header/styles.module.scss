@@ -2,9 +2,16 @@
 @import '../../assets/utils/mixins';
 
 .header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+
   height: 76px;
 
   border-bottom: 1px solid $c-coal-4;
+  background: $c-black-1;
 }
 
 .headerWrapper {
@@ -12,8 +19,9 @@
 
   height: 76px;
 
-  border-bottom: 1px solid $c-coal-4;
   cursor: pointer;
+
+  border-bottom: 1px solid $c-coal-4;
 
   @include flex-between;
 }

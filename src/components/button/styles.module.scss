@@ -1,11 +1,49 @@
-@import '../../assets/utils/vars.scss';
+@import '../../assets/utils/vars';
+@import '../../assets/utils/mixins';
 
 .button {
   width: 100%;
+  max-width: 640px;
+  max-height: 50px;
   padding: 16px;
+
+  letter-spacing: 0.4px;
+  gap: 6px;
+
   border: none;
   border-radius: $b-radius;
-  background: $c-purple;
-  font-weight: $fw-700;
+
   font-size: $fs-16;
+  font-weight: $fw-700;
+
+  @include flex-center;
+}
+
+.purple {
+  background: $c-purple;
+
+  @include hover(background-color, $c-purple-2);
+}
+
+.green {
+  gap: 7px;
+
+  background: $c-green;
+
+  @include hover(background-color, $c-green-2);
+  @include flex-center;
+}
+
+.ghost {
+  border: 3px solid $c-coal-6;
+  background: transparent;
+
+  @include hover(background-color, $c-coal-5);
+}
+
+.gradient {
+  background: linear-gradient(104deg, #A139FD 11.26%, #50BDFC 90.79%);
+  box-shadow: 0 4px 7px 0 rgb(0 0 0 / 8%);
+
+  @include hover(background, linear-gradient(190deg, #A139FD 11.26%, #50BDFC 90.79%));
 }

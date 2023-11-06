@@ -1,20 +1,47 @@
-@import '../../assets/utils/vars.scss';
-@import '../../assets/utils/mixins.scss';
+@import '../../assets/utils/vars';
+@import '../../assets/utils/mixins';
 
 .category {
-  @include flex-between;
   width: 100%;
+  max-width: 640px;
   padding: 12px 20px;
-  background: $c-coal-5;
+
   border: 2px solid $c-coal-1;
   border-radius: $b-radius;
+  background: $c-coal-5;
+
+  @include flex-between;
 }
 
 .categoryName {
   width: max-content;
+  font-size: $fs-12;
+
+  @include pad {
+
+    font-size: $fs-16;
+  }
 }
 
 .actionBtnWrapper {
-  @include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  min-width: 121px;
   gap: 20px;
+}
+
+.iconBtn {
+  cursor: pointer;
+
+  @include flex-center;
+}
+
+.disabled {
+  color: $c-gray-2;
+}
+
+.grab {
+  cursor: grab;
 }

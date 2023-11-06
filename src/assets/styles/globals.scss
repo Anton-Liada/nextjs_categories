@@ -1,36 +1,40 @@
-@import '../utils/vars.scss';
+@import '../utils/vars';
 
 @font-face {
-  font-family: 'Satoshi';
+  font-family: Satoshi;
   font-display: swap;
+
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Satoshi';
+  font-family: Satoshi;
   src: url('../fonts/Satoshi-Regular.woff2') format('woff2');
+
   font-weight: normal;
 }
 
 @font-face {
-  font-family: 'Satoshi';
+  font-family: Satoshi;
   src: url('../fonts/Satoshi-Bold.woff2') format('woff2');
+
   font-weight: bold;
 }
 
 @font-face {
-  font-family: 'Satoshi';
+  font-family: Satoshi;
   src: url('../fonts/Satoshi-Medium.woff2') format('woff2');
+
   font-weight: 500;
 }
 
 
 html,
 body {
-  font-family: 'Satoshi', sans-serif;
+  max-width: 100vw;
+
   color: $c-white;
-  overflow-x: hidden;
   background: $c-black-1;
 
-  max-width: 100vw;
+  font-family: Satoshi, sans-serif;
 }

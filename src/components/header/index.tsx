@@ -3,8 +3,14 @@ import Logo from "@/components/icons/logo";
 import Container from "../container";
 import SearchInput from "../searchInput";
 import styles from "./styles.module.scss";
+import { FC } from "react";
 
-const Header = () => {
+interface IHeaderProps {
+  name: string;
+  setName: (value: string) => void;
+}
+
+const Header: FC<IHeaderProps> = ({ name, setName }) => {
   return (
     <header className={`${styles.header} container`}>
       <Container>
@@ -15,7 +21,7 @@ const Header = () => {
             <h1 className={styles.title}>Memes</h1>
           </Link>
 
-          <SearchInput />
+          <SearchInput name={name} setName={setName} />
         </div>
       </Container>
     </header>

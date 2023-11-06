@@ -1,12 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { FC } from "react";
 import Search from "@/components/icons/search";
 import styles from "./styles.module.scss";
 
-const SearchInput = () => {
-  const [name, setName] = useState("");
+interface ISearchInput {
+  name: string;
+  setName: (value: string) => void;
+}
 
+const SearchInput: FC<ISearchInput> = ({ name, setName }) => {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
@@ -27,4 +30,5 @@ const SearchInput = () => {
     </div>
   );
 };
+
 export default SearchInput;

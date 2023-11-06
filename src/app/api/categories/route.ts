@@ -1,4 +1,4 @@
-import { getCategories, saveCategory } from "@/app/service/service";
+import { getCategories, saveCategories } from "@/app/service/service";
 import { logRequest } from "@/app/utils/middleware";
 import { createEdgeRouter } from "next-connect";
 import type { NextRequest } from "next/server";
@@ -9,7 +9,7 @@ router.use(logRequest);
 
 router.get(() => getCategories());
 
-router.post(async req => await saveCategory(req));
+router.post(async req => await saveCategories(req));
 
 export async function GET(request: NextRequest, ctx: { params?: unknown }) {
   return router.run(request, ctx);

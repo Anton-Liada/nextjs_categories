@@ -6,14 +6,17 @@ export interface RequestContext {
   };
 }
 
-export interface Category {
+export interface ICategory {
   id: string;
   name: string;
   active: boolean;
 }
 
 export interface CategoryProps {
-  category: Category;
+  category: ICategory;
+  handleOpenModal: (id: string) => void;
+  onCheckboxChange: (categoryId: string, isChecked: boolean) => void;
+  draggableProvided: any;
 }
 
 export interface ButtonProps
@@ -22,4 +25,9 @@ export interface ButtonProps
     HTMLButtonElement
   > {
   children: ReactNode;
+  bgColor: "purple" | "green" | "ghost" | "gradient";
+}
+
+export interface ICategoryListProps {
+  name: string;
 }

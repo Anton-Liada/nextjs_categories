@@ -33,7 +33,6 @@ on the <body> text input doesn"t working */
 input,
 textarea {
   user-select: auto;
-  user-select: auto;
 }
 
 /* revert the "white-space" property for textarea elements on Safari */
@@ -43,7 +42,6 @@ textarea {
 
 /* minimum style to allow to style meter element */
 meter {
-  appearance: revert;
   appearance: revert;
 }
 
@@ -63,7 +61,6 @@ meter {
  - webkit-user-select: auto; added for Safari in case of using
  user-select:none on wrapper element */
 [contenteditable]:not([contenteditable='false']) {
-  user-select: auto;
   user-select: auto;
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
