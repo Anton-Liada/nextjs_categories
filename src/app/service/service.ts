@@ -1,8 +1,9 @@
 import { NextResponse, NextRequest } from "next/server";
 import { ICategory } from "@/types";
 import { validateCategory } from "../utils/common";
+import { v4 as uuidv4 } from "uuid";
 
-export const randomId = () => crypto.randomUUID();
+export const randomId = () => uuidv4();
 const categories: ICategory[] = [
   { id: randomId(), name: "blockchain", active: true },
   { id: randomId(), name: "NFT Paris", active: true },
@@ -31,7 +32,7 @@ export function deleteCategory(id: string) {
   const indexToDelete = categories.findIndex(category => category.id === id);
 
   if (indexToDelete === -1) {
-    return NextResponse.json({ error: "Category not found" }, { status: 404 });
+    return NextResponse.json({ error: "Category not found" });
   }
 
   categories.splice(indexToDelete, 1);

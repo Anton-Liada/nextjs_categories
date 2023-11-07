@@ -20,7 +20,8 @@ const Modal: FC<IModalProps> = ({ handleClose, onDelete }) => {
         <h3 className={styles.title}>Delete the Category?</h3>
 
         <p className={styles.text}>
-          All templates in the category will be moved to the category "Other"
+          All templates in the category will be moved to the category
+          &quot;Other&quot;
         </p>
 
         <Button bgColor="gradient" onClick={onDelete}>
